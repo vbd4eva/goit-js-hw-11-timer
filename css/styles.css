@@ -12,9 +12,6 @@ body {
   height: 100%;
 }
 
-body {
-}
-
 .timer {
   background-color: var(--color-background);
   position: absolute;
