@@ -1,0 +1,108 @@
+:root {
+  --color-background: #ffffff;
+  --color-accent-primary: #0abab5;
+  --color-accent-secondary: crimson;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+}
+
+.timer {
+  background-color: var(--color-background);
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* padding: 21px; */
+  /* border-radius: 50%; */
+  /* border: 2px dotted var(--color-accent-primary); */
+  background: #ccc;
+  width: 85px;
+  height: 80px;
+  box-sizing: border-box;
+}
+.timer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  /* border: 2px dashed var(--color-accent-primary); */
+}
+.field {
+  /* direction: rtl; */
+  position: relative;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.label {
+  font-family: "Syne Mono", monospace;
+  font-size: 12px;
+  color: var(--color-accent-secondary);
+}
+.value {
+  font-family: "Orbitron", sans-serif;
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.clock:before {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px double var(--color-accent-primary);
+}
+
+.clock__arrow {
+  height: 3px;
+  width: 105px;
+  position: relative;
+  transform-origin: center left;
+  transform: rotate(0deg);
+}
+.arrow {
+  background-color: var(--color-accent-secondary);
+  width: 80px;
+}
+.arrow1 {
+  top: -3px;
+  background-color: var(--color-background);
+  animation: rotateWithOrigin 60000ms linear 2000ms infinite;
+}
+.arrow2 {
+  top: -6px;
+  background-color: var(--color-background);
+  animation: rotateWithOrigin 60000ms linear 1100ms infinite;
+}
+@keyframes rotateWithOrigin {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
